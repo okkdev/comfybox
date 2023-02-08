@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name "RP2040-Zero")(type "KiCad")(uri "${KIPRJMOD}/lib/RP2040-Zero.pretty/RP2040-Zero.kicad_sym")(options "")(descr ""))
+)
