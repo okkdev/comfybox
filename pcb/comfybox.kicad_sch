@@ -11,6 +11,35 @@
   )
 
   (lib_symbols
+    (symbol "Mechanical:MountingHole" (pin_names (offset 1.016)) (in_bom yes) (on_board yes)
+      (property "Reference" "H" (at 0 5.08 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Value" "MountingHole" (at 0 3.175 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "mounting hole" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Mounting Hole without connection" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "MountingHole*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "MountingHole_0_1"
+        (circle (center 0 0) (radius 1.27)
+          (stroke (width 1.27) (type default))
+          (fill (type none))
+        )
+      )
+    )
     (symbol "RP2040-Zero:RP2040-Zero" (in_bom yes) (on_board yes)
       (property "Reference" "A" (at 0 1.27 0)
         (effects (font (size 1.27 1.27)))
@@ -313,7 +342,6 @@
       )
     )
   )
-
 
 
   (wire (pts (xy 62.23 85.09) (xy 62.23 88.9))
@@ -774,6 +802,30 @@
     )
   )
 
+  (symbol (lib_id "Mechanical:MountingHole") (at 100.33 177.8 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 1d3fe208-133b-41db-8c17-f2409a3df0ff)
+    (property "Reference" "H3" (at 102.87 177.165 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "MountingHole" (at 102.87 179.705 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "MountingHole:MountingHole_4.3mm_M4" (at 100.33 177.8 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 100.33 177.8 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "comfybox"
+        (path "/9a77f188-2d2d-4d89-86c0-244b937205f9"
+          (reference "H3") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Switch:SW_Push") (at 201.93 72.39 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 2bf912dd-be99-4601-b086-b60d1966be39)
@@ -795,6 +847,30 @@
       (project "comfybox"
         (path "/9a77f188-2d2d-4d89-86c0-244b937205f9"
           (reference "UP2") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Mechanical:MountingHole") (at 100.33 168.91 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 2d9a3190-8f59-470e-ac95-e5b527e86f73)
+    (property "Reference" "H1" (at 102.87 168.275 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "MountingHole" (at 102.87 170.815 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "MountingHole:MountingHole_4.3mm_M4" (at 100.33 168.91 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 100.33 168.91 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "comfybox"
+        (path "/9a77f188-2d2d-4d89-86c0-244b937205f9"
+          (reference "H1") (unit 1)
         )
       )
     )
@@ -875,6 +951,30 @@
     )
   )
 
+  (symbol (lib_id "Mechanical:MountingHole") (at 100.33 186.69 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 4931f965-d203-42b5-a8d0-afc1c20af785)
+    (property "Reference" "H5" (at 102.87 186.055 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "MountingHole" (at 102.87 188.595 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "MountingHole:MountingHole_4.3mm_M4" (at 100.33 186.69 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 100.33 186.69 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "comfybox"
+        (path "/9a77f188-2d2d-4d89-86c0-244b937205f9"
+          (reference "H5") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:GND") (at 186.69 72.39 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 5efdc5b8-56f1-4a80-8781-834a276b4e73)
@@ -921,6 +1021,30 @@
       (project "comfybox"
         (path "/9a77f188-2d2d-4d89-86c0-244b937205f9"
           (reference "OPT5") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Mechanical:MountingHole") (at 121.92 168.91 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 61258e5f-b8f8-4805-9d7b-c4dc5eaace4a)
+    (property "Reference" "H2" (at 124.46 168.275 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "MountingHole" (at 124.46 170.815 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "MountingHole:MountingHole_4.3mm_M4" (at 121.92 168.91 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 121.92 168.91 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "comfybox"
+        (path "/9a77f188-2d2d-4d89-86c0-244b937205f9"
+          (reference "H2") (unit 1)
         )
       )
     )
@@ -1388,6 +1512,30 @@
     )
   )
 
+  (symbol (lib_id "Mechanical:MountingHole") (at 121.92 177.8 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid ac4d1fc0-6cd4-4c37-a9f2-bb90feea78a3)
+    (property "Reference" "H4" (at 124.46 177.165 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "MountingHole" (at 124.46 179.705 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "MountingHole:MountingHole_4.3mm_M4" (at 121.92 177.8 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 121.92 177.8 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "comfybox"
+        (path "/9a77f188-2d2d-4d89-86c0-244b937205f9"
+          (reference "H4") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "power:GND") (at 166.37 38.1 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid ac9dcb03-729c-44a7-8f46-dbae3b8a06a5)
@@ -1687,6 +1835,30 @@
       (project "comfybox"
         (path "/9a77f188-2d2d-4d89-86c0-244b937205f9"
           (reference "#PWR02") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Mechanical:MountingHole") (at 121.92 186.69 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid fa29ecc2-768c-47c0-9236-cd037fd84fa3)
+    (property "Reference" "H6" (at 124.46 186.055 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "MountingHole" (at 124.46 188.595 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "MountingHole:MountingHole_4.3mm_M4" (at 121.92 186.69 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 121.92 186.69 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (instances
+      (project "comfybox"
+        (path "/9a77f188-2d2d-4d89-86c0-244b937205f9"
+          (reference "H6") (unit 1)
         )
       )
     )
