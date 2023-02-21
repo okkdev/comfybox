@@ -2,6 +2,8 @@
 
 A stickless fighting game controller, intended to be more ergonomic compared to the regular stickless style layout.
 
+![comfybox pcb](assets/pcb_render.png)
+
 ## Features
 
 - Split and 16° angled buttons for improved ergonomics
