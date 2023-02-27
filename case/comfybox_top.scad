@@ -37,7 +37,7 @@ difference() {
         
     opt_buttons = [ for (i = [1:5]) [-20.75, 85.5] - [14*i, 0] ];
     
-    for (o = opt_buttons) translate(o) circle(3);
+    for (o = opt_buttons) translate(o) circle(3.2);
         
     mount_holes = [
 //        pcb
