@@ -1,10 +1,13 @@
 $fa = 1;
 $fs = 0.5;
 
-module rsquare(size, radius) {
+//config
+top = false;
+
+module rsquare(size, radius, center) {
   x = size.x - radius * 2;
   y = size.y - radius * 2;
-  offset(r = radius) square([ x, y ], center = true);
+  offset(r = radius) square([ x, y ], center = center);
 }
 
 3_buttons = [
@@ -26,7 +29,7 @@ left_buttons = [
 
 difference() {
 //    base
-    rsquare([350, 190], 10);
+    rsquare([350, 190], 10, center=true);
     
     buttons = [
         each [ for (b = left_buttons) b + [-35, 35] ],
@@ -34,10 +37,6 @@ difference() {
     ];
     
     for (b = buttons) translate(b) circle(12);
-        
-    opt_buttons = [ for (i = [1:5]) [-20.75, 85.5] - [14*i, 0] ];
-    
-    for (o = opt_buttons) translate(o) circle(3.2);
         
     mount_holes = [
 //        pcb
@@ -56,4 +55,18 @@ difference() {
     ];
     
     for (m = mount_holes) translate(m) circle(2);
+        
+    if (top) {
+        opt_buttons = [ for (i = [1:5]) [-20.75, 85.5] - [14*i, 0] ];
+        for (o = opt_buttons) translate(o) circle(3.2);
+    }
+    else {
+//        cutouts
+//        opt buttons
+        translate([-63, 85.5]) rsquare([66, 8], 2, center=true);
+//        oled
+        translate([-6.8, 4]) rsquare([28, 34], 2, center=true);
+//        pico zero
+        translate([-7, 83.1]) rsquare([22, 28], 2, center=true);
+    }
 }

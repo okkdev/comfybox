@@ -55,7 +55,7 @@ module case() {
         
         translate([-63, 85.5, height-pcb_height-2]) rcube(66, 8, 3, 4, center=true);
         
-        translate([-7.8, 17, height-pcb_height-2]) rcube(13, 6, 3, 3, center=true);
+        translate([-6.8, 17, height-pcb_height-2]) rcube(13, 6, 3, 3, center=true);
         
         mount_holes = [
     //        pcb
