@@ -2,7 +2,8 @@ $fa = 1;
 $fs = 0.5;
 
 //config
-top = false;
+top = true;
+wrist_rests = false;
 
 module rsquare(size, radius, center) {
   x = size.x - radius * 2;
@@ -41,11 +42,12 @@ difference() {
     mount_holes = [
 //        pcb
         [0, -29.5],
-        [-114, -29.5],
-        [114, -29.5],
         [114, 89],
         [-114, 89],
         [21.5, 80.5],
+//        bottom corners of pcb
+//        [-114, -29.5],
+//        [114, -29.5],
     
 //        case
         [165, 85],
@@ -59,6 +61,11 @@ difference() {
     if (top) {
         opt_buttons = [ for (i = [1:5]) [-20.75, 85.5] - [14*i, 0] ];
         for (o = opt_buttons) translate(o) circle(3.2);
+        
+        if (wrist_rests) {
+            translate([114, -40]) rotate(a=24, v=[0,0,1]) import("wristrest.svg", center=true);
+            translate([-114, -40]) rotate(a=-24, v=[0,0,1]) import("wristrest.svg", center=true);
+        }
     }
     else {
 //        cutouts
