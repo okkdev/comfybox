@@ -40,3 +40,5 @@ out/
 *.FCStd1
 *.fcstd2
 *.FCStd2
+
+build/
