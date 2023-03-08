@@ -7,7 +7,7 @@
   (title_block
     (title "comfybox")
     (date "2022-12-22")
-    (rev "0.1")
+    (rev "0.2")
   )
 
   (lib_symbols
