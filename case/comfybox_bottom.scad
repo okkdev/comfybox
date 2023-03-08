@@ -44,7 +44,7 @@ module case() {
         
     //    pcb
         pcb_height = 1.6;
-        translate([0, 29.80, height-pcb_height]) rcube(240.5, 130.5, 2, 4, center=true);
+        translate([0, 29.60, height-pcb_height]) rcube(241, 131, 2, 4, center=true);
 
         buttons = [
             each [ for (b = left_buttons) b + [-35, 35] ],
