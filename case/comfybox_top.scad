@@ -2,7 +2,7 @@ $fa = 1;
 $fs = 0.5;
 
 //config
-top = true;
+top = false;
 wrist_rests = false;
 
 module rsquare(size, radius, center) {
@@ -30,7 +30,7 @@ left_buttons = [
 
 difference() {
 //    base
-    rsquare([350, 190], 10, center=true);
+    rsquare([350, 190], 15, center=true);
     
     buttons = [
         each [ for (b = left_buttons) b + [-35, 35] ],
