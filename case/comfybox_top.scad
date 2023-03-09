@@ -72,7 +72,7 @@ difference() {
 //        opt buttons
         translate([-63, 85.5]) rsquare([66, 8], 2, center=true);
 //        oled
-        translate([-6.8, 4]) rsquare([28, 34], 2, center=true);
+        translate([-6.8, 5]) rsquare([28, 31], 2, center=true);
 //        pico zero
         translate([-7, 83.1]) rsquare([22, 28], 2, center=true);
     }
