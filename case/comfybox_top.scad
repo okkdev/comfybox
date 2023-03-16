@@ -2,7 +2,7 @@ $fa = 1;
 $fs = 0.5;
 
 //config
-top = false;
+top = true;
 wrist_rests = false;
 
 module rsquare(size, radius, center) {
@@ -59,7 +59,7 @@ difference() {
     for (m = mount_holes) translate(m) circle(2);
         
     if (top) {
-        opt_buttons = [ for (i = [1:5]) [-20.75, 85.5] - [14*i, 0] ];
+        opt_buttons = [ for (i = [0:4]) [-34.5, 85.5] - [14*i, 0] ];
         for (o = opt_buttons) translate(o) circle(3.2);
         
         if (wrist_rests) {

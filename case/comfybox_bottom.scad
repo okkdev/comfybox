@@ -38,6 +38,7 @@ module case() {
         [0,  -55.5],
     ];  
     
+//    solder cutouts
     difference() {
     //    base
         rcube(350, 190, height, 15, center=true);
@@ -53,8 +54,10 @@ module case() {
         
         for (b = buttons) translate([b[0], b[1], height-pcb_height-2]) cylinder(3, r=9);
         
-        translate([-63, 85.5, height-pcb_height-2]) rcube(66, 8, 3, 4, center=true);
+//        opt buttons
+        translate([-63, 85.5, height-pcb_height-2]) rcube(66, 12, 3, 6, center=true);
         
+//        oled
         translate([-6.8, 17, height-pcb_height-2]) rcube(13, 6, 3, 3, center=true);
         
         mount_holes = [
