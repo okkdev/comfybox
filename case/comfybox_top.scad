@@ -2,13 +2,33 @@ $fa = 1;
 $fs = 0.5;
 
 //config
-top = true;
-wrist_rests = false;
+top = false;
+ali_wrist_rests = true;
+fellowes_wrist_rests = false;
 
 module rsquare(size, radius, center) {
   x = size.x - radius * 2;
   y = size.y - radius * 2;
   offset(r = radius) square([ x, y ], center = center);
+}
+
+module fellowes_wrist_rests() {
+    translate([114, -40]) rotate(a=24, v=[0,0,1]) import("fellowes_wristrest.svg", center=true);      
+    translate([-114, -40]) rotate(a=-24, v=[0,0,1]) import("fellowes_wristrest.svg", center=true);     
+}
+
+module ali_wrist_rests() {
+    left = [-120, -50];
+    right = [120, -50];
+    
+    if (top) {
+            translate(right) rotate(a=24, v=[0,0,1]) scale([0.935, 0.935, 1]) import("ali_wristrest.svg", center=true);
+            translate(left) rotate(a=-24, v=[0,0,1]) scale([0.935, 0.935, 1]) import("ali_wristrest.svg", center=true);
+    }
+    else {
+            translate(right) rotate(a=24, v=[0,0,1]) import("ali_wristrest.svg", center=true);
+            translate(left) rotate(a=-24, v=[0,0,1]) import("ali_wristrest.svg", center=true);
+    }
 }
 
 3_buttons = [
@@ -57,15 +77,19 @@ difference() {
     ];
     
     for (m = mount_holes) translate(m) circle(2);
+   
+    if (fellowes_wrist_rests) {
+        fellowes_wrist_rests();
+    }
+    
+    if (ali_wrist_rests) {
+        ali_wrist_rests();
+    }
         
     if (top) {
         opt_buttons = [ for (i = [0:4]) [-34.5, 85.5] - [14*i, 0] ];
-        for (o = opt_buttons) translate(o) circle(3.2);
-        
-        if (wrist_rests) {
-            translate([114, -40]) rotate(a=24, v=[0,0,1]) import("wristrest.svg", center=true);
-            translate([-114, -40]) rotate(a=-24, v=[0,0,1]) import("wristrest.svg", center=true);
-        }
+//        3.2 is the sweetspot but I made a mistake on the pcb
+        for (o = opt_buttons) translate(o) circle(3.7);
     }
     else {
 //        cutouts

@@ -63,8 +63,8 @@ module case() {
         mount_holes = [
     //        pcb
             [0, -29.5],
-            [-114, -29.5],
-            [114, -29.5],
+//            [-114, -29.5],
+//            [114, -29.5],
             [114, 89],
             [-114, 89],
             [21.5, 80.5],
@@ -79,5 +79,5 @@ module case() {
         for (m = mount_holes) translate([m[0], m[1], -1]) cylinder(height+2, r=2);
     }
 }
-
-if (southpaw) mirror(v=[1,0,0]) case(); else case();
+//                                           scale hack because of cnc
+if (southpaw) mirror(v=[1,0,0]) case(); else scale([1.004, 1.004, 1]) case();

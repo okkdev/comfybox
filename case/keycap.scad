@@ -13,6 +13,8 @@ difference() {
     translate([0, 0, -0.4]) resize([0,0,2]) sphere(r=9);
     
     translate([0, 0, 2.5]) cylinder(4, d=18.5);
+    
+    translate([0, 0, 5]) cube([14.5, 14.5, 5], center = true);
 }
 
 if (choc_stem) {
