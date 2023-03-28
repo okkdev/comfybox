@@ -36,16 +36,16 @@ module ali_wrist_rests() {
     [20.5, 20.5],
     [48,  28],
 ];
-4_buttons = [ each 3_buttons, [77,  28] ];
+4_buttons = [ each 3_buttons, [77,  22] ];
 
 right_buttons = [
     each 4_buttons,
     each [ for (b = 4_buttons) b + [6, -28] ],
-    [0,  -67.5],
+    [0,  -65.5],
 ];
 left_buttons = [
     each [ for (b = 3_buttons) [-b[0], b[1]] ],
-    [0,  -55.5],
+    [0,  -53.5],
 ];
 
 difference() {
