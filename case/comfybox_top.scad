@@ -22,8 +22,8 @@ module ali_wrist_rests() {
     right = [120, -50];
     
     if (top) {
-            translate(right) rotate(a=24, v=[0,0,1]) scale([0.935, 0.935, 1]) import("ali_wristrest.svg", center=true);
-            translate(left) rotate(a=-24, v=[0,0,1]) scale([0.935, 0.935, 1]) import("ali_wristrest.svg", center=true);
+            translate(right) rotate(a=24, v=[0,0,1]) scale([0.918, 0.918, 1]) import("ali_wristrest.svg", center=true);
+            translate(left) rotate(a=-24, v=[0,0,1]) scale([0.918, 0.918, 1]) import("ali_wristrest.svg", center=true);
     }
     else {
             translate(right) rotate(a=24, v=[0,0,1]) import("ali_wristrest.svg", center=true);
