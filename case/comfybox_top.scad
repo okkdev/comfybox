@@ -18,16 +18,16 @@ module fellowes_wrist_rests() {
 }
 
 module ali_wrist_rests() {
-    left = [-120, -50];
-    right = [120, -50];
+    left = [-118, -49];
+    right = [118, -49];
     
     if (top) {
-            translate(right) rotate(a=24, v=[0,0,1]) scale([0.918, 0.918, 1]) import("ali_wristrest.svg", center=true);
-            translate(left) rotate(a=-24, v=[0,0,1]) scale([0.918, 0.918, 1]) import("ali_wristrest.svg", center=true);
+            translate(right) rotate(a=24, v=[0,0,1]) import("ali_wristrest_top.svg", center=true);
+            translate(left) rotate(a=-24, v=[0,0,1]) import("ali_wristrest_top.svg", center=true);
     }
     else {
-            translate(right) rotate(a=24, v=[0,0,1]) import("ali_wristrest.svg", center=true);
-            translate(left) rotate(a=-24, v=[0,0,1]) import("ali_wristrest.svg", center=true);
+            translate(right) rotate(a=24, v=[0,0,1]) import("ali_wristrest_bottom.svg", center=true);
+            translate(left) rotate(a=-24, v=[0,0,1]) import("ali_wristrest_bottom.svg", center=true);
     }
 }
 
