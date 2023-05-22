@@ -3,7 +3,7 @@ $fs = 0.5;
 
 //config
 top = false;
-ali_wrist_rests = true;
+ali_wrist_rests = false;
 fellowes_wrist_rests = false;
 
 module rsquare(size, radius, center) {
@@ -40,7 +40,7 @@ module ali_wrist_rests() {
 
 right_buttons = [
     each 4_buttons,
-    each [ for (b = 4_buttons) b + [6, -28] ],
+    each [ for (b = 4_buttons) b + [10, -28] ],
     [0,  -65.5],
 ];
 left_buttons = [
