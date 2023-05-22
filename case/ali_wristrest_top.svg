@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg148"
+   width="101.00008mm"
+   height="67.004738mm"
+   viewBox="0 0 101.00009 67.004739"
+   sodipodi:docname="ali_wristrest_top.svg"
+   inkscape:version="1.2.2 (b0a84865, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs152" />
+  <sodipodi:namedview
+     id="namedview150"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="2.0023105"
+     inkscape:cx="160.06508"
+     inkscape:cy="204.26402"
+     inkscape:window-width="1800"
+     inkscape:window-height="1098"
+     inkscape:window-x="0"
+     inkscape:window-y="71"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="mm" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer1"
+     inkscape:label="Layer 1"
+     inkscape:highlight-color="#ee7c3b"
+     inkscape:export-filename="../Desktop/ali_wristrest.svg"
+     inkscape:export-xdpi="96"
+     inkscape:export-ydpi="96"
+     transform="translate(-90.5194,-242.75881)">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.233006"
+       d="m 141.08033,249.74646 c 13.15221,-0.62587 16.94882,-6.56689 26.99656,-6.86439 8.6394,-0.2558 23.42444,6.73357 23.32559,26.65065 -0.11853,23.88274 -23.27064,39.99472 -50.32215,40.11374 -26.02532,0.11452 -50.691685,-16.55151 -50.442557,-40.66733 0.174424,-16.88442 11.136447,-26.00207 23.170707,-26.09706 12.2128,-0.0964 15.22026,6.64194 27.27185,6.86439 z"
+       id="path431"
+       sodipodi:nodetypes="csssssc" />
+  </g>
+</svg>

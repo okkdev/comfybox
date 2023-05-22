@@ -4,9 +4,9 @@
 <svg
    version="1.1"
    id="svg148"
-   width="111mm"
-   height="77mm"
-   viewBox="0 0 111 77.000001"
+   width="112.0583mm"
+   height="77.030838mm"
+   viewBox="0 0 112.05831 77.030839"
    sodipodi:docname="ali_wristrest.svg"
    inkscape:version="1.2.2 (b0a84865, 2022-12-01)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -26,13 +26,13 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
-     inkscape:zoom="3.2737308"
-     inkscape:cx="207.25589"
-     inkscape:cy="173.19689"
-     inkscape:window-width="2520"
-     inkscape:window-height="1352"
-     inkscape:window-x="1532"
-     inkscape:window-y="40"
+     inkscape:zoom="2.0023105"
+     inkscape:cx="160.06508"
+     inkscape:cy="204.26402"
+     inkscape:window-width="1800"
+     inkscape:window-height="1126"
+     inkscape:window-x="0"
+     inkscape:window-y="43"
      inkscape:window-maximized="0"
      inkscape:current-layer="layer1"
      inkscape:document-units="mm" />
@@ -40,7 +40,7 @@
      id="g156"
      inkscape:groupmode="layer"
      inkscape:label="Page 1"
-     transform="matrix(1.3333333,0,0,-1.3333333,-91.048525,857.414)"
+     transform="matrix(1.3333333,0,0,-1.3333333,-90.519399,857.41354)"
      style="display:none">
     <g
        id="g158"
@@ -63,10 +63,10 @@
      inkscape:export-filename="../Desktop/ali_wristrest.svg"
      inkscape:export-xdpi="96"
      inkscape:export-ydpi="96"
-     transform="translate(-91.048525,-242.746)">
+     transform="translate(-90.519399,-242.74646)">
     <path
        style="fill:none;stroke:#000000;stroke-width:0.263322"
-       d="m 146.54936,249.49622 c 9.94594,-0.24769 16.06403,-6.40854 27.04801,-6.61578 8.80635,-0.16616 28.42884,7.13415 28.31904,30.03446 -0.13166,27.45995 -25.3191,46.59321 -55.36705,46.73006 -28.90809,0.13167 -55.643768,-18.8985 -55.367045,-46.62644 0.193744,-19.41341 14.645955,-30.03446 28.013255,-30.13808 14.29947,-0.11085 17.9344,6.20649 27.35379,6.61578 z"
+       d="m 146.54936,249.49622 c 11.39815,-0.16391 15.00664,-6.42565 27.04801,-6.61578 9.59945,-0.15157 28.95801,7.13415 28.84821,30.03446 -0.13166,27.45995 -25.84827,46.59321 -55.89622,46.73006 -28.90809,0.13167 -56.172935,-18.8985 -55.896212,-46.62644 0.193744,-19.41341 15.175122,-30.03446 28.542422,-30.13808 14.29947,-0.11085 16.7527,6.04337 27.35379,6.61578 z"
        id="path431"
        sodipodi:nodetypes="csssssc" />
   </g>
