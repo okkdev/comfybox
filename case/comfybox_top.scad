@@ -34,13 +34,13 @@ module ali_wrist_rests() {
 3_buttons = [
     [0,  0],
     [20.5, 20.5],
-    [48,  28],
+    [47.5,  28],
 ];
-4_buttons = [ each 3_buttons, [77,  22] ];
+4_buttons = [ each 3_buttons, [75.5,  23] ];
 
 right_buttons = [
     each 4_buttons,
-    each [ for (b = 4_buttons) b + [10, -28] ],
+    each [ for (b = 4_buttons) b + [10, -26] ],
     [0,  -65.5],
 ];
 left_buttons = [
@@ -50,7 +50,7 @@ left_buttons = [
 
 difference() {
 //    base
-    rsquare([350, 190], 15, center=true);
+    rsquare([330, 190], 15, center=true);
     
     buttons = [
         each [ for (b = left_buttons) b + [-35, 35] ],
@@ -70,10 +70,10 @@ difference() {
 //        [114, -29.5],
     
 //        case
-        [165, 85],
-        [165, -85],
-        [-165, -85],
-        [-165, 85],
+        [155, 85],
+        [155, -85],
+        [-155, -85],
+        [-155, 85],
     ];
     
     for (m = mount_holes) translate(m) circle(2);
