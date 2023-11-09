@@ -1,9 +1,11 @@
 $fa = 1;
 $fs = 0.5;
 
-//config
+//there are 2 layers of the top part
 top = false;
+//aliexpress wristrests
 ali_wrist_rests = false;
+//fellowes wristrests
 fellowes_wrist_rests = false;
 
 module rsquare(size, radius, center) {
@@ -22,12 +24,12 @@ module ali_wrist_rests() {
     right = [118, -49];
     
     if (top) {
-            translate(right) rotate(a=24, v=[0,0,1]) import("ali_wristrest_top.svg", center=true);
-            translate(left) rotate(a=-24, v=[0,0,1]) import("ali_wristrest_top.svg", center=true);
+        translate(right) rotate(a=24, v=[0,0,1]) import("ali_wristrest_top.svg", center=true);
+        translate(left) rotate(a=-24, v=[0,0,1]) import("ali_wristrest_top.svg", center=true);
     }
     else {
-            translate(right) rotate(a=24, v=[0,0,1]) import("ali_wristrest_bottom.svg", center=true);
-            translate(left) rotate(a=-24, v=[0,0,1]) import("ali_wristrest_bottom.svg", center=true);
+        translate(right) rotate(a=24, v=[0,0,1]) import("ali_wristrest_bottom.svg", center=true);
+        translate(left) rotate(a=-24, v=[0,0,1]) import("ali_wristrest_bottom.svg", center=true);
     }
 }
 
@@ -36,12 +38,16 @@ module ali_wrist_rests() {
     [20.5, 20.5],
     [47.5,  28],
 ];
-4_buttons = [ each 3_buttons, [75.5,  23] ];
+4_buttons = [
+    each 3_buttons, 
+    [75.5,  23],    
+];
 
 right_buttons = [
     each 4_buttons,
     each [ for (b = 4_buttons) b + [10, -26] ],
     [0,  -65.5],
+    [22, -50],
 ];
 left_buttons = [
     each [ for (b = 3_buttons) [-b[0], b[1]] ],
@@ -88,8 +94,7 @@ difference() {
         
     if (top) {
         opt_buttons = [ for (i = [0:4]) [-34.5, 85.5] - [14*i, 0] ];
-//        3.2 is the sweetspot but I made a mistake on the pcb
-        for (o = opt_buttons) translate(o) circle(3.7);
+        for (o = opt_buttons) translate(o) circle(3.3);
     }
     else {
 //        cutouts
