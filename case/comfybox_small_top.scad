@@ -10,25 +10,6 @@ module rsquare(size, radius, center) {
   offset(r = radius) square([ x, y ], center = center);
 }
 
-module fellowes_wrist_rests() {
-    translate([114, -40]) rotate(a=24, v=[0,0,1]) import("fellowes_wristrest.svg", center=true);      
-    translate([-114, -40]) rotate(a=-24, v=[0,0,1]) import("fellowes_wristrest.svg", center=true);     
-}
-
-module ali_wrist_rests() {
-    left = [-118, -49];
-    right = [118, -49];
-    
-    if (top) {
-            translate(right) rotate(a=24, v=[0,0,1]) import("ali_wristrest_top.svg", center=true);
-            translate(left) rotate(a=-24, v=[0,0,1]) import("ali_wristrest_top.svg", center=true);
-    }
-    else {
-            translate(right) rotate(a=24, v=[0,0,1]) import("ali_wristrest_bottom.svg", center=true);
-            translate(left) rotate(a=-24, v=[0,0,1]) import("ali_wristrest_bottom.svg", center=true);
-    }
-}
-
 3_buttons = [
     [0,  0],
     [20.5, 20.5],

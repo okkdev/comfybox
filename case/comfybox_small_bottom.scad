@@ -1,3 +1,5 @@
+include <Round-Anything/polyround.scad>
+
 $fn = 64;
 $fs = 0.15;
 
@@ -5,51 +7,13 @@ $fs = 0.15;
 height = 7;
 southpaw = false;
 
-module roundedcube(width, depth, height, radius = 0.5, center = false, apply_to = "all") {
-	translate_min = radius;
-	translate_xmax = width - radius;
-	translate_ymax = depth - radius;
-	translate_zmax = height - radius;
-
-	diameter = radius * 2;
-
-	obj_translate = (center == false) ?
-		[0, 0, 0] : [
-			-(width / 2),
-			-(depth / 2)
-		];
-
-	translate(v = obj_translate) {
-		hull() {
-			for (translate_x = [translate_min, translate_xmax]) {
-				x_at = (translate_x == translate_min) ? "min" : "max";
-				for (translate_y = [translate_min, translate_ymax]) {
-					y_at = (translate_y == translate_min) ? "min" : "max";
-					for (translate_z = [translate_min, translate_zmax]) {
-						z_at = (translate_z == translate_min) ? "min" : "max";
-
-						translate(v = [translate_x, translate_y, translate_z])
-						if (
-							(apply_to == "all") ||
-							(apply_to == "xmin" && x_at == "min") || (apply_to == "xmax" && x_at == "max") ||
-							(apply_to == "ymin" && y_at == "min") || (apply_to == "ymax" && y_at == "max") ||
-							(apply_to == "zmin" && z_at == "min") || (apply_to == "zmax" && z_at == "max")
-						) {
-							sphere(r = radius);
-						} else {
-							rotate = 
-								(apply_to == "xmin" || apply_to == "xmax" || apply_to == "x") ? [0, 90, 0] : (
-								(apply_to == "ymin" || apply_to == "ymax" || apply_to == "y") ? [90, 90, 0] :
-								[0, 0, 0]
-							);
-							rotate(a = rotate)
-							cylinder(h = diameter, r = radius, center = true);
-						}
-					}
-				}
-			}
-		}
-	}
+module roundedcube(width, depth, height, radius = 0.5, center = false) {
+	extrudeWithRadius(height, r1=radius, r2=radius, fn=$fn){
+        x = width - radius * 2;
+        y = depth - radius * 2;
+        offset(r = radius)
+        square([ x, y ], center = center);
+    }
 }
 
 module rcube(width, depth, height, radius, center){
@@ -90,8 +54,17 @@ module case() {
     difference() {
     //    base
         translate([0, 29.6, 0])
-        roundedcube(247, 137, height+7, 3, center=true);
-        
+        union() {
+            roundedcube(247, 137, height+7, 3, center=true);
+            
+            // handlebar
+            radiiPoints = [[0,-10,0],[30,10,20],[80,10,1],[80,-10,0]];
+            translate([37.5, 68, 2])
+            extrudeWithRadius(10, r1=2, r2=2, fn=$fn){
+                polygon(polyRound(beamChain(radiiPoints, offset1=-6, offset2=4), 20));
+            }
+        }
+            
     //    pcb
         pcb_height = 1.6;
         translate([0, 29.60, height-pcb_height])
@@ -111,6 +84,9 @@ module case() {
         
 //        oled
         translate([-6.8, 17, height-pcb_height-2]) rcube(13, 6, 3, 3, center=true);
+        
+        // pico zero
+        translate([-7, 95, height]) roundedcube(12, 20, 6, 3, center=true);
         
         mount_holes = [
     //        pcb
