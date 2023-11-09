@@ -35,9 +35,10 @@ module ali_wrist_rests() {
 
 3_buttons = [
     [0,  0],
-    [20.5, 20.5],
-    [47.5,  28],
+    [19.5, 20],
+    [46.5,  27.5],
 ];
+
 4_buttons = [
     each 3_buttons, 
     [75.5,  23],    
@@ -63,7 +64,7 @@ difference() {
         each [ for (b = right_buttons) b + [20, 47] ],
     ];
     
-    for (b = buttons) translate(b) circle(12);
+    for (b = buttons) translate(b) circle(d=24);
         
     mount_holes = [
 //        pcb
@@ -99,9 +100,9 @@ difference() {
     else {
 //        cutouts
 //        opt buttons
-        translate([-63, 85.5]) rsquare([66, 8], 2, center=true);
+        translate([-62.5, 85.5]) rsquare([65, 8], 2, center=true);
 //        oled
-        translate([-6.8, 5]) rsquare([28, 31], 2, center=true);
+        translate([-6.8, 6]) rsquare([28, 29], 2, center=true);
 //        pico zero
         translate([-7, 83.1]) rsquare([22, 28], 2, center=true);
     }

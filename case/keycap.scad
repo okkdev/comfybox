@@ -10,7 +10,7 @@ difference() {
         translate([0, 0, -0.4]) rotate_extrude() translate([10, 0]) circle(r=1);
     }
     
-    translate([0, 0, -0.4]) resize([0,0,2]) sphere(r=9);
+    translate([0, 0, -0.4]) resize([0,0,2]) sphere(d=18);
     
     translate([0, 0, 2.5]) cylinder(4, d=18.5);
     
@@ -32,10 +32,10 @@ if (choc_stem) {
 else {
 //    mx stem
     translate([0, 0, 1]) difference() {
-        cylinder(5.5, d=5.6);
+        cylinder(4.5, d=5.6);
         
-//        default is 1.28 made a bit tighter for fit
-        stem_width = 1.25;
+//        default is 1.28
+        stem_width = 1.28;
         stem_depth = 4;
         translate([-stem_width/2, -stem_depth/2]) cube([stem_width, stem_depth, 6]);
         translate([-stem_depth/2, -stem_width/2]) cube([stem_depth, stem_width, 6]);
