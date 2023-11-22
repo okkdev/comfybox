@@ -1,6 +1,6 @@
 include <Round-Anything/polyround.scad>
 
-$fn = 64;
+$fn = 10;
 $fs = 0.15;
 
 //config
@@ -48,27 +48,26 @@ module case() {
     left_buttons = [
         each [ for (b = 3_buttons) [-b[0], b[1]] ],
         [0,  -55.5],
-    ];  
-    
-//    solder cutouts
+    ];
+
     difference() {
-    //    base
+        // base
         translate([0, 29.6, 0])
         union() {
             roundedcube(247, 137, height+7, 3, center=true);
             
             // handlebar
             radiiPoints = [[0,-10,0],[30,10,20],[80,10,1],[80,-10,0]];
-            translate([37.5, 68, 2])
-            extrudeWithRadius(10, r1=2, r2=2, fn=$fn){
+            translate([37.5, 68, 0])
+            extrudeWithRadius(10, r1=3, r2=2, fn=$fn){
                 polygon(polyRound(beamChain(radiiPoints, offset1=-6, offset2=4), 20));
             }
         }
             
-    //    pcb
+        // pcb
         pcb_height = 1.6;
         translate([0, 29.60, height-pcb_height])
-        rcube(241, 131, 10, 4, center=true);
+        rcube(240.5, 130.5, 10, 4, center=true);
 
         buttons = [
             each [ for (b = left_buttons) b + [-35, 35] ],
@@ -79,17 +78,18 @@ module case() {
         translate([b[0], b[1], height-pcb_height-2])
         cylinder(3, r=9);
         
-//        opt buttons
+        // opt buttons
         translate([-63, 85.5, height-pcb_height-2]) rcube(66, 12, 3, 6, center=true);
         
-//        oled
+        // oled
         translate([-6.8, 17, height-pcb_height-2]) rcube(13, 6, 3, 3, center=true);
         
-        // pico zero
+        // pico zero port
         translate([-7, 95, height]) roundedcube(12, 20, 6, 3, center=true);
+        translate([-7, 100.5, height-1.5]) roundedcube(20, 10, 9, 2, center=true);
         
         mount_holes = [
-    //        pcb
+            // pcb
             [0, -29.5],
             [-114, -29.5],
             [114, -29.5],
@@ -97,7 +97,7 @@ module case() {
             [-114, 89],
             [21.5, 80.5],
         
-    //        case
+            // case
             [165, 85],
             [165, -85],
             [-165, -85],
@@ -106,7 +106,7 @@ module case() {
         
         for (m = mount_holes)
         translate([m[0], m[1], -1])
-        cylinder(height+2, r=2);
+        cylinder(height+2, d=4);
     }
 }
 //                                           scale hack because of cnc
