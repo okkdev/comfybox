@@ -29,7 +29,7 @@ difference() {
     difference() {
     //    base
         translate([0, 29.6, 0])
-        rsquare([241, 131], 4, center=true);
+        rsquare([240.4, 130.4], 4, center=true);
         
         buttons = [
             each [ for (b = left_buttons) b + [-35, 35] ],
@@ -50,14 +50,14 @@ difference() {
             [114, -29.5],
         ];
         
-        for (m = mount_holes) translate(m) circle(2);
+        for (m = mount_holes) translate(m) circle(d=4);
             
         union() {
             opt_buttons = [ for (i = [0:4]) [-34.5, 85.5] - [14*i, 0] ];
             for (o = opt_buttons) translate(o) circle(3.4);
         }
     }
-    translate([0,0,-2])
+    translate([0,0,-1.2])
     linear_extrude(height = 7)
     union() {
 //        cutouts
